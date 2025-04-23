@@ -1,0 +1,345 @@
+body {
+    background: url('images/WhatsApp\ Image\ 2025-03-14\ at\ 10.44.57_0c6e4d3f.jpg')no-repeat fixed; 
+    background-color: black;
+    background-size: cover;
+}
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+body {
+    margin: 10px;
+    padding: 0px;
+    font-family: "Nunito Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    background: url(client-images/bg.png)no-repeat fixed;
+    color: white;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+/* Header Styling */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px 40px;
+    /*background: black; /* Ensure header is also black */
+    box-sizing: border-box;
+}
+.see-our{
+    font-weight: 600;
+    font-size: 40px ;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+/* Center Navigation */
+.nav-container {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 700;
+    position: relative;
+    padding: 10px;
+    transition: color 0.3s, transform 0.2s;
+}
+
+/* Hover Effect */
+nav a:hover {
+    color: #AA14F0;
+    transform: scale(1.1);
+}
+
+/* Contact Button Container */
+.contact-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+/* Oval-Shaped Contact Button */
+.contact-btn {
+    background: #AA14F0;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: background 0.3s, transform 0.2s;
+    white-space: nowrap;
+}
+.contact-btn a{
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+
+}
+
+
+/* Contact Button Hover Effect */
+.contact-btn:hover {
+    background: #56047c;
+    color: black;
+    transform: scale(1.1);
+}
+
+/* .see-our {
+    background: transparent;
+    background-color: #280d34;
+    color: rgb(235, 198, 237);
+    border: 2px solid rgb(220, 179, 239);
+    padding: 10px 30px;
+    font-size: 1rem;
+    
+    border-radius: 10px;
+} */
+
+.work {
+    font-size: 5.5rem;
+    font-weight: bold;
+}
+
+.itself {
+    font-size: 5.5rem;
+    font-weight: bold;
+}
+
+.discover {
+    font-size: large;
+}
+
+.see {
+    padding-left: 5%;
+}
+.designs{
+    background: transparent;
+    background-color: #280d34;
+    color: rgb(235, 198, 237);
+    border: 2px solid rgb(220, 179, 239);
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 10px;
+}
+.designs:hover {
+    background: rgb(220, 179, 239);
+    color: black;
+    transform: scale(1.1);
+}
+
+
+.image-gallery {
+    display: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+/* Default Active (Posters) */
+.image-gallery.active {
+    display: flex;
+}
+
+/* Gallery Images */
+.image-gallery img {
+    width: 22%; /* 4 Images per row */
+    height: 350px;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Hover Effect */
+.image-gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+.image-gallery img,
+.video-gallery video {
+    display: none;
+}
+.image-gallery,
+.video-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+
+.video-gallery {
+    display: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 80px;
+    margin-top: 30px;
+}
+
+/* Default Active (Posters) */
+.video-gallery.active {
+    display: flex;
+}
+
+/* Gallery Images */
+.video-gallery video {
+    width: 210px; /* 4 Images per row */
+    height: 350px;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Hover Effect */
+.video-gallery video:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+/* Button Container */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+
+
+.load {
+    margin: 50px;
+}
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .nav-container {
+        margin-bottom: 10px;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .contact-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .contact-btn {
+        padding: 10px 25px;
+    }
+}
+
+
+
+@media (max-width: 1200px) {
+    .image-gallery img {
+        width: calc(33.33% - 20px); /* 3 images per row */
+    }
+}
+
+@media (max-width: 992px) {
+    .image-gallery img {
+        width: calc(50% - 20px); /* 2 images per row */
+    }
+}
+@media (max-width: 600px) {
+    .image-gallery img {
+        width: 100%; /* 1 image per row */
+    }
+
+    .button-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .designs {
+        width: 90%;
+        text-align: center;
+    }
+}
+
+/* Footer Styling */
+footer {
+    /* background: black; Match body color */
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Footer Navigation */
+.footer-nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.footer-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 700;
+    transition: color 0.3s, transform 0.2s;
+}
+
+/* Social Media Icons */
+.social-icons {
+    display: flex;
+    gap: 20px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 1.5rem;
+    transition: transform 0.3s, color 0.3s;
+}
+
+/* Hover Effect */
+.footer-nav a:hover, .social-icons a:hover {
+    color: #AA14F0;
+    transform: scale(1.2);
+}
+
+/* 🔹 Responsive Footer */
+@media (max-width: 768px) {
+    footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-nav {
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 10px;
+    }
+
+    .social-icons {
+        justify-content: center;
+        margin-top: 10px;
+    }
+}
